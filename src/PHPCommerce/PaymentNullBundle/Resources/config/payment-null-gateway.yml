@@ -1,0 +1,19 @@
+services:
+     phpcommerce.payment.gateway.null.configuration:
+         class:        PHPCommerce\Payment\Service\Gateway\NullPaymentGatewayConfigurationImpl
+
+     phpcommerce.payment.gateway.null.rollback_service:
+         class:        PHPCommerce\Payment\Service\Gateway\NullPaymentGatewayRollbackServiceImpl
+
+     phpcommerce.payment.gateway.null.transaction_service:
+         class:        PHPCommerce\Payment\Service\Gateway\NullPaymentGatewayTransactionServiceImpl
+
+     phpcommerce.payment.gateway.null.configuration_service:
+         class:        PHPCommerce\Payment\Service\Gateway\NullPaymentGatewayConfigurationServiceImpl
+         tags:
+            -  { name: phpcommerce.payment.gateway }
+         calls:
+            - [setConfiguration,      ["@phpcommerce.payment.gateway.null.configuration"]]
+            - [setRollbackService,    ["@phpcommerce.payment.gateway.null.rollback_service"]]
+            - [setTransactionService, ["@phpcommerce.payment.gateway.null.transaction_service"]]
+
