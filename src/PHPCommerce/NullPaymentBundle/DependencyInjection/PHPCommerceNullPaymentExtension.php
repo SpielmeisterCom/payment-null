@@ -1,21 +1,21 @@
 <?php
-namespace PHPCommerce\PaymentBundle\DependencyInjection;
+namespace PHPCommerce\NullPaymentBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\Config\FileLocator;
 
-class PHPCommercePaymentNullExtension extends Extension
+class PHPCommerceNullPaymentExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('payment-null-gateway.yml');
+        $loader->load('null-payment-gateway.yml');
     }
 
     public function getAlias()
     {
-        return 'php_commerce_payment_null';
+        return 'php_commerce_null_payment';
     }
 }

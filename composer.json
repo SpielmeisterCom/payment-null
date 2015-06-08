@@ -18,6 +18,7 @@
   "require": {
   },
   "require-dev": {
+    "phpcommerce/payment": "dev-master",
     "phpunit/phpunit": "~4"
   }
 }
