@@ -1,0 +1,23 @@
+{
+  "name": "phpcommerce/payment-null",
+  "autoload": {
+    "psr-0" : {
+      "PHPCommerce" : "src"
+    }
+  },
+  "version": "dev-master",
+  "description": "PHPCommerce Null Payment",
+  "minimum-stability": "stable",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Julian Haupt",
+      "email": "julian.haupt@hauptmedia.de"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4"
+  }
+}
