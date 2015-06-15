@@ -142,6 +142,6 @@ class NullPaymentGatewayConfigurationImpl implements NullPaymentGatewayConfigura
      * @return PaymentGatewayType
      */
     public function getGatewayType() {
-        return NullPaymentGatewayType::NULL_GATEWAY;
+        return NullPaymentGatewayType::$NULL_GATEWAY;
     }
 }
